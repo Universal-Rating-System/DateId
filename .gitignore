@@ -1,3 +1,12 @@
+# Bright Edge eServices
+*.db
+*.sqlite
+**/__pycache__/
+**/Archive/
+**/VersionArchive/
+.idea/
+desktop.ini
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -21,7 +30,7 @@ sdist/
 var/
 wheels/
 share/python-wheels/
-*.egg-info/
+**/*.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
