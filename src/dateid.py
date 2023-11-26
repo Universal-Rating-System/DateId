@@ -1,7 +1,3 @@
-'''Creat integer for a date
-
-Calculate an integer value for months and dates from a base date
-'''
 import datetime
 
 
