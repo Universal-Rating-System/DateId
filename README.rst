@@ -1,6 +1,6 @@
-=================
-Exploring FastAPI
-=================
+======
+DateId
+======
 
 +-----------+------------------------------------------------------------------------------------+
 |**General**| |maintenance_y| |semver| |license|                                                 |
@@ -13,15 +13,6 @@ Exploring FastAPI
 +-----------+------------------------------------------------------------------------------------+
 
 
-This project provides a sandbox to experiment with FastAPI. This idea is to build an example sequentially in steps to
-give new users the idea on where to start and how to progress.
-
-Along the way some principles will be exhibited. The code should be self-explanatory.
-
-The source code in ``src`` by itself does not do much, it basically only defines the tables and some setup code.  The
-"examples" are in the ``pytest's`` since we are experimenting to see howe it works and if it was successful.
-
-References:
 
 
 Installation
@@ -118,8 +109,8 @@ bit easier.  The scripts make use of the ``gitit`` module to simplify tasks.
     :target: http://unmaintained.tech/
     :alt: Maintenance - intended
 
-.. |license| image:: https://img.shields.io/pypi/l/FastAPIExample
-    :target: https://github.com/hendrikdutoit/FastAPIExample/blob/master/LICENSE
+.. |license| image:: https://img.shields.io/pypi/l/DateId
+    :target: https://github.com/BrightEdgeeServices/DateId/blob/master/LICENSE
     :alt: License
 
 .. |semver| image:: https://img.shields.io/badge/Semantic%20Versioning-2.0.0-brightgreen.svg?style=flat-square
@@ -133,60 +124,60 @@ bit easier.  The scripts make use of the ``gitit`` module to simplify tasks.
 
 .. CI
 
-.. |pre_commit_ci| image:: https://img.shields.io/github/actions/workflow/status/hendrikdutoit/FastAPIExample/pre-commit.yml?label=pre-commit
-    :target: https://github.com/hendrikdutoit/FastAPIExample/blob/master/.github/workflows/pre-commit.yml
+.. |pre_commit_ci| image:: https://img.shields.io/github/actions/workflow/status/BrightEdgeeServices/DateId/pre-commit.yml?label=pre-commit
+    :target: https://github.com/BrightEdgeeServices/DateId/blob/master/.github/workflows/pre-commit.yml
     :alt: Pre-Commit
 
-.. |gha_tests| image:: https://img.shields.io/github/actions/workflow/status/hendrikdutoit/FastAPIExample/ci.yml?label=ci
-    :target: https://github.com/hendrikdutoit/FastAPIExample/blob/master/.github/workflows/ci.yml
+.. |gha_tests| image:: https://img.shields.io/github/actions/workflow/status/BrightEdgeeServices/DateId/ci.yml?label=ci
+    :target: https://github.com/BrightEdgeeServices/DateId/blob/master/.github/workflows/ci.yml
     :alt: Test status
 
-.. |gha_docu| image:: https://img.shields.io/readthedocs/fastapiexample
-    :target: https://github.com/hendrikdutoit/FastAPIExample/blob/master/.github/workflows/check-rst-documentation.yml
+.. |gha_docu| image:: https://img.shields.io/readthedocs/DateId
+    :target: https://github.com/BrightEdgeeServices/DateId/blob/master/.github/workflows/check-rst-documentation.yml
     :alt: Read the Docs
 
-.. |codecov| image:: https://img.shields.io/codecov/c/gh/hendrikdutoit/FastAPIExample
-    :target: https://app.codecov.io/gh/hendrikdutoit/FastAPIExample
+.. |codecov| image:: https://img.shields.io/codecov/c/gh/BrightEdgeeServices/DateId
+    :target: https://app.codecov.io/gh/BrightEdgeeServices/DateId
     :alt: CodeCov
 
 
 .. PyPI
 
-.. |pypi_release| image:: https://img.shields.io/pypi/v/FastAPIExample
-    :target: https://pypi.org/project/FastAPIExample/
+.. |pypi_release| image:: https://img.shields.io/pypi/v/DateId
+    :target: https://pypi.org/project/DateId/
     :alt: PyPI - Package latest release
 
-.. |pypi_py_versions| image:: https://img.shields.io/pypi/pyversions/FastAPIExample
-    :target: https://pypi.org/project/FastAPIExample/
+.. |pypi_py_versions| image:: https://img.shields.io/pypi/pyversions/DateId
+    :target: https://pypi.org/project/DateId/
     :alt: PyPI - Supported Python Versions
 
-.. |pypi_format| image:: https://img.shields.io/pypi/wheel/FastAPIExample
-    :target: https://pypi.org/project/FastAPIExample/
+.. |pypi_format| image:: https://img.shields.io/pypi/wheel/DateId
+    :target: https://pypi.org/project/DateId/
     :alt: PyPI - Format
 
-.. |pypi_downloads| image:: https://img.shields.io/pypi/dm/FastAPIExample
-    :target: https://pypi.org/project/FastAPIExample/
+.. |pypi_downloads| image:: https://img.shields.io/pypi/dm/DateId
+    :target: https://pypi.org/project/DateId/
     :alt: PyPI - Monthly downloads
 
-.. |pypi_status| image:: https://img.shields.io/pypi/status/FastAPIExample
-    :target: https://pypi.org/project/FastAPIExample/
+.. |pypi_status| image:: https://img.shields.io/pypi/status/DateId
+    :target: https://pypi.org/project/DateId/
     :alt: PyPI - Status
 
 
 .. GitHub
 
-.. |gh_issues| image:: https://img.shields.io/github/issues-raw/hendrikdutoit/FastAPIExample
-    :target: https://github.com/hendrikdutoit/FastAPIExample/issues
+.. |gh_issues| image:: https://img.shields.io/github/issues-raw/BrightEdgeeServices/DateId
+    :target: https://github.com/BrightEdgeeServices/DateId/issues
     :alt: GitHub - Issue Counter
 
-.. |gh_language| image:: https://img.shields.io/github/languages/top/hendrikdutoit/FastAPIExample
-    :target: https://github.com/hendrikdutoit/FastAPIExample
+.. |gh_language| image:: https://img.shields.io/github/languages/top/BrightEdgeeServices/DateId
+    :target: https://github.com/BrightEdgeeServices/DateId
     :alt: GitHub - Top Language
 
-.. |gh_last_commit| image:: https://img.shields.io/github/last-commit/hendrikdutoit/FastAPIExample/master
-    :target: https://github.com/hendrikdutoit/FastAPIExample/commit/master
+.. |gh_last_commit| image:: https://img.shields.io/github/last-commit/BrightEdgeeServices/DateId/master
+    :target: https://github.com/BrightEdgeeServices/DateId/commit/master
     :alt: GitHub - Last Commit
 
-.. |gh_deployment| image:: https://img.shields.io/github/deployments/hendrikdutoit/FastAPIExample/pypi
-    :target: https://github.com/hendrikdutoit/FastAPIExample/deployments/pypi
+.. |gh_deployment| image:: https://img.shields.io/github/deployments/BrightEdgeeServices/DateId/pypi
+    :target: https://github.com/BrightEdgeeServices/DateId/deployments/pypi
     :alt: GitHub - PiPy Deployment
