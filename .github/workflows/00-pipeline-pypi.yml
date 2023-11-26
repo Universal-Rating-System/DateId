@@ -5,15 +5,15 @@ on:
   push:
 
 jobs:
-#  Pre-Commit:
-#    uses: ./.github/workflows/01-pre-commit.yml
-#
-#  Check-Documentation:
-#    needs: Pre-Commit
-#    uses: ./.github/workflows/02-check-rst-documentation.yml
+  Pre-Commit:
+    uses: ./.github/workflows/01-pre-commit.yml
+
+  Check-Documentation:
+    needs: Pre-Commit
+    uses: ./.github/workflows/02-check-rst-documentation.yml
 
   CI:
-#    needs: Check-Documentation
+    needs: Check-Documentation
     uses: ./.github/workflows/03-ci.yml
 
   Build-and-Release-to-Pypi:
