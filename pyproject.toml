@@ -1,6 +1,6 @@
 [project]
 name = 'DateId'
-version = '1.4.1'
+version = '1.4.2'
 authors = [
     { name = 'Hendrik du Toit', email = 'hendrik@brightedge.co.za' },
 ]
@@ -18,11 +18,7 @@ classifiers = [
 ]
 readme = {file = 'README.rst', content-type = 'text/x-rst'}
 requires-python = '>=3.10, <3.12'
-dependencies = [
-    # ToDo
-    # Remove if installation works fine
-#    'beetools<5',
-  ]
+dependencies = []
 
 [project.optional-dependencies]
 dev = [
