@@ -1,18 +1,17 @@
 [project]
 name = 'DateId'
-version = '1.3.2'
+version = '1.4.0'
 authors = [
     { name = 'Hendrik du Toit', email = 'hendrik@brightedge.co.za' },
 ]
 description = 'Calculate an integer value for months and dates from a base date.'
 license = {file = 'LICENSE'}
 classifiers = [
-    'Development Status :: 3 - Alpha',
+    'Development Status :: 5 - Production/Stable',
     'Intended Audience :: Developers',
     'Intended Audience :: Information Technology',
-    'Topic :: Communications',
     'Topic :: Software Development',
-    'Topic :: Internet :: WWW/HTTP',
+    'Topic :: Software Development :: Libraries',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11'
@@ -20,17 +19,21 @@ classifiers = [
 readme = {file = 'README.rst', content-type = 'text/x-rst'}
 requires-python = '>=3.10, <3.12'
 dependencies = [
-    'beetools<5',
+    # ToDo
+    # Remove if installation works fine
+#    'beetools<5',
   ]
 
 [project.optional-dependencies]
 dev = [
     'build',
     'git-it',
+    'pydantic-settings',
     'Pygments',
     'pytest',
     'pytest-cov',
     'rstcheck',
+    'time_machine',
 ]
 
 [project.urls]
