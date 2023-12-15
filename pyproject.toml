@@ -1,6 +1,6 @@
 [project]
 name = 'DateId'
-version = '1.4.2'
+version = '1.4.3'
 authors = [
     { name = 'Hendrik du Toit', email = 'hendrik@brightedge.co.za' },
 ]
