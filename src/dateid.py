@@ -4,11 +4,11 @@ import datetime
 class DateId:
     """Calculate an integer value for months and dates from a base date"""
 
-    def __init__(self, p_base_date_str='2008/01/01', p_target_date_str=None, p_target_day=None):
+    def __init__(self, p_base_date_str="2008/01/01", p_target_date_str=None, p_target_day=None):
         """Calculate an integer value for months and dates from a base date"""
         self.base_date_str = p_base_date_str
-        self.base_date_str = self.base_date_str.replace('-', '')
-        self.base_date_str = self.base_date_str.replace('/', '')
+        self.base_date_str = self.base_date_str.replace("-", "")
+        self.base_date_str = self.base_date_str.replace("/", "")
         self.base_date = datetime.date(
             int(self.base_date_str[:4]), int(self.base_date_str[4:6]), int(self.base_date_str[-2:])
         )
@@ -23,7 +23,7 @@ class DateId:
             self.calc_day_id(p_target_day=p_target_day)
             self.calc_month_id(p_target_day=p_target_day)
         else:
-            p_target_date_str = datetime.date.today().strftime('%Y-%m-%d')
+            p_target_date_str = datetime.date.today().strftime("%Y-%m-%d")
             self.calc_day_id(p_target_date_str=p_target_date_str)
             self.calc_month_id(p_target_date_str=p_target_date_str)
         pass
@@ -33,8 +33,8 @@ class DateId:
     def calc_day_id(self, p_target_date_str=None, p_target_day=None):
         """Returns the date id of the target date"""
         if p_target_date_str:
-            self.target_date_str = p_target_date_str.replace('-', '')
-            self.target_date_str = self.target_date_str.replace('/', '')
+            self.target_date_str = p_target_date_str.replace("-", "")
+            self.target_date_str = self.target_date_str.replace("/", "")
             self.target_date = datetime.date(
                 int(self.target_date_str[:4]), int(self.target_date_str[4:6]), int(self.target_date_str[-2:])
             )
@@ -52,15 +52,15 @@ class DateId:
         """Returns a range of date_id's in Tuple structure"""
         one_day = datetime.timedelta(days=1)
         if isinstance(p_start_date_parm, str):
-            start_date_parm = p_start_date_parm.replace('-', '')
-            start_date_parm = start_date_parm.replace('/', '')
+            start_date_parm = p_start_date_parm.replace("-", "")
+            start_date_parm = start_date_parm.replace("/", "")
             start_date = datetime.date(int(start_date_parm[:4]), int(start_date_parm[4:6]), int(start_date_parm[-2:]))
         elif isinstance(p_start_date_parm, int):
             start_date_day = datetime.timedelta(days=p_start_date_parm)
             start_date = self.base_date + start_date_day - one_day
         if isinstance(p_end_date_parm, str):
-            end_date_parm = p_end_date_parm.replace('-', '')
-            end_date_parm = end_date_parm.replace('/', '')
+            end_date_parm = p_end_date_parm.replace("-", "")
+            end_date_parm = end_date_parm.replace("/", "")
             end_date = datetime.date(int(end_date_parm[:4]), int(end_date_parm[4:6]), int(end_date_parm[-2:]))
         elif isinstance(p_end_date_parm, int):
             end_date_day = datetime.timedelta(days=p_end_date_parm)
@@ -69,10 +69,10 @@ class DateId:
         process_date = start_date
         days_tbl = []
         months_tbl = []
-        old_month_id = self.calc_month_id(process_date.strftime('%Y-%m-%d')) - 1
+        old_month_id = self.calc_month_id(process_date.strftime("%Y-%m-%d")) - 1
         for i in range(i_len.days + 1):
-            month_id = self.calc_month_id(process_date.strftime('%Y-%m') + '-01')
-            day_id = self.calc_day_id(process_date.strftime('%Y-%m-%d'))
+            month_id = self.calc_month_id(process_date.strftime("%Y-%m") + "-01")
+            day_id = self.calc_day_id(process_date.strftime("%Y-%m-%d"))
             row_days = (day_id, month_id, process_date.year, process_date.month, process_date.day, process_date)
             days_tbl.append(row_days)
             if month_id != old_month_id:
@@ -80,7 +80,7 @@ class DateId:
                     month_id,
                     process_date.year,
                     process_date.month,
-                    self.calc_day_id(process_date.strftime('%Y-%m') + '-01'),
+                    self.calc_day_id(process_date.strftime("%Y-%m") + "-01"),
                 )
                 months_tbl.append(row_months)
             process_date += one_day
@@ -106,8 +106,8 @@ class DateId:
     def calc_month_id(self, p_target_date_str=None, p_target_day=None):
         """Returns the month id of the target date"""
         if p_target_date_str:
-            self.target_date_str = p_target_date_str.replace('-', '')
-            self.target_date_str = self.target_date_str.replace('/', '')
+            self.target_date_str = p_target_date_str.replace("-", "")
+            self.target_date_str = self.target_date_str.replace("/", "")
             self.target_date = datetime.date(
                 int(self.target_date_str[:4]), int(self.target_date_str[4:6]), int(self.target_date_str[-2:])
             )
@@ -132,5 +132,5 @@ class DateId:
             self.target_date = self.base_date + self.day_id
         else:
             self.target_date = self.base_date
-        self.target_date_str = self.target_date.strftime('%Y%m%d')
+        self.target_date_str = self.target_date.strftime("%Y%m%d")
         # return self.target_date_str
