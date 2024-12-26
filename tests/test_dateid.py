@@ -3,11 +3,11 @@ import datetime
 import pytest
 import time_machine
 
+from conftest import test_set_01
+from conftest import test_set_02
+from conftest import test_set_03
+from conftest import test_set_leap_years
 from dateid import DateId
-from tests.conftest import test_set_01
-from tests.conftest import test_set_02
-from tests.conftest import test_set_03
-from tests.conftest import test_set_leap_years
 
 
 class TestDateId:

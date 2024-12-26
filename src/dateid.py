@@ -2,10 +2,10 @@ import datetime
 
 
 class DateId:
-    '''Calculate an integer value for months and dates from a base date'''
+    """Calculate an integer value for months and dates from a base date"""
 
     def __init__(self, p_base_date_str='2008/01/01', p_target_date_str=None, p_target_day=None):
-        '''Calculate an integer value for months and dates from a base date'''
+        """Calculate an integer value for months and dates from a base date"""
         self.base_date_str = p_base_date_str
         self.base_date_str = self.base_date_str.replace('-', '')
         self.base_date_str = self.base_date_str.replace('/', '')
@@ -31,7 +31,7 @@ class DateId:
     # end __init__
 
     def calc_day_id(self, p_target_date_str=None, p_target_day=None):
-        '''Returns the date id of the target date'''
+        """Returns the date id of the target date"""
         if p_target_date_str:
             self.target_date_str = p_target_date_str.replace('-', '')
             self.target_date_str = self.target_date_str.replace('/', '')
@@ -49,7 +49,7 @@ class DateId:
     # end calc_day_id
 
     def generate_range(self, p_start_date_parm, p_end_date_parm):
-        '''Returns a range of date_id's in Tuple structure'''
+        """Returns a range of date_id's in Tuple structure"""
         one_day = datetime.timedelta(days=1)
         if isinstance(p_start_date_parm, str):
             start_date_parm = p_start_date_parm.replace('-', '')
@@ -90,7 +90,7 @@ class DateId:
     # end generate_range
 
     def is_leap_year(self, p_target_year):
-        '''Determines if year is a leap year'''
+        """Determines if year is a leap year"""
         if p_target_year % 4 != 0:
             success = False
         elif p_target_year % 100 != 0:
@@ -104,7 +104,7 @@ class DateId:
     # end is_leap_year
 
     def calc_month_id(self, p_target_date_str=None, p_target_day=None):
-        '''Returns the month id of the target date'''
+        """Returns the month id of the target date"""
         if p_target_date_str:
             self.target_date_str = p_target_date_str.replace('-', '')
             self.target_date_str = self.target_date_str.replace('/', '')
@@ -123,7 +123,7 @@ class DateId:
     # end calc_month_id
 
     def specific_date(self, p_day_id):
-        '''Returns the date in string format for the p_day_id'''
+        """Returns the date in string format for the p_day_id"""
         self.day_id = datetime.timedelta(days=p_day_id)
         one_day = datetime.timedelta(days=1)
         if p_day_id > 0:
