@@ -15,7 +15,7 @@ target-version = [
 count = ''
 quiet-level = 2
 skip = 'documentation/Archive/*'
-ignore-words-list = 'AfterAll'
+ignore-words-list = 'space-holder'
 
 [tool.coverage.run]
 source = [
@@ -34,7 +34,7 @@ authors = [
     "Hendrik du Toit <hendrik@brightedge.co.za>",
 ]
 license = "file:LICENSE"
-readme = "README.md"
+readme = "README.rst"
 classifiers = [
     'Development Status :: 5 - Production/Stable',
     'Intended Audience :: Developers',
