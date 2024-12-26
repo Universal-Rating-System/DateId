@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 jobs:
-  Build-and-Release-to-Pypi:
+  Build:
     runs-on: ${{ matrix.os }}
 
     environment:
@@ -52,8 +52,8 @@ jobs:
       - name: Run tests or additional checks
         run: poetry run pytest  # Replace it with your test command
 
-  merge:
-    needs: build
+  Merge:
+    needs: Build
     runs-on: ${{ matrix.os }}
 
     permissions:
@@ -94,7 +94,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_REPO_ACCESS_BY_OWN_APPS }}
 
   publish:
-    needs: merge
+    needs: Merge
     runs-on: ${{ matrix.os }}
 
     strategy:
