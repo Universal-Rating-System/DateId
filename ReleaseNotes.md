@@ -1,3 +1,9 @@
+# Release 1.5.3
+
+- Add "Send Notice" to Workflow
+
+______________________________________________________________________
+
 # Release 1.5.2
 
 - Add Release to Workflow
