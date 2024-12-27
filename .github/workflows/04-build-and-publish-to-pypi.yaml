@@ -1,4 +1,4 @@
-name: Build-and-Deploy-to-Production
+name: Build-and-Publish-to-PyPI
 
 on:
   workflow_call:
@@ -12,8 +12,9 @@ jobs:
       url: https://pypi.org/p/DateId
 
     permissions:
-      id-token: write
+#      id-token: write
       contents: write
+      id-token: write
       issues: write
       pull-requests: write
 
@@ -26,75 +27,92 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+#        with:
+#          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install Poetry
+      - name: Install Poetry & Dependencies
         run: |
-          curl -sSL https://install.python-poetry.org | python3 -
-          echo "PATH=$HOME/.local/bin:$PATH" >> $GITHUB_ENV
-
-      - name: Configure Poetry
+          pip install --upgrade pip
+          pip install poetry
+          poetry install
+      - name: Build package
         run: |
-          poetry config http-basic.github.com x-access-token ${{ secrets.GH_REPO_ACCESS_BY_OWN_APPS }}
-
-      - name: Install dependencies using Poetry
-        run: poetry install
-
-      - name: Build the application using Poetry
-        run: poetry build
-
-      - name: Run tests or additional checks
-        run: poetry run pytest  # Replace it with your test command
-
-  Merge:
-    needs: Build
-    runs-on: ${{ matrix.os }}
-
-    permissions:
-      id-token: write
-      contents: write
-      issues: write
-      pull-requests: write
-
-    strategy:
-      fail-fast: true
-      matrix:
-        os: [ 'ubuntu-latest' ]
-        python-version: [ '3.12' ]
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+          poetry build
+          ls -la dist  # Debug: list what's in dist
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          fetch-depth: 0
+          user: __token__
+          password: ${{ secrets.PYPI_TOKEN }}  # or your PyPI API token
+          packages_dir: dist
+          # verify_metadata: true  # optional, default: true
+          # skip_existing: false   # optional
+          # attestations: true     # optional
 
-      - name: Set Git identity
-        run: |
-          git config --global user.name 'GitHub Action'
-          git config --global user.email 'action@github.com'
+      #          curl -sSL https://install.python-poetry.org | python3 -
+#          echo "PATH=$HOME/.local/bin:$PATH" >> $GITHUB_ENV
 
-      - name: Merge into master
-        id: merge
-        run: |
-          git checkout master
-          git merge --no-ff $GITHUB_REF
-        continue-on-error: false
+#      - name: Configure Poetry
+#        run: |
+#          poetry config http-basic.github.com x-access-token ${{ secrets.GH_REPO_ACCESS_BY_OWN_APPS }}
 
-      - name: Push to master
-        if: steps.merge.outcome == 'success'
-        run: |
-          git push origin master
-        env:
-          GH_TOKEN: ${{ secrets.GH_REPO_ACCESS_BY_OWN_APPS }}
+#      - name: Install dependencies using Poetry
+#        run: poetry install
+
+#      - name: Build the application using Poetry
+#        run: poetry build
+
+#      - name: Run tests or additional checks
+#        run: poetry run pytest  # Replace it with your test command
+
+#  Merge:
+#    needs: Build
+#    runs-on: ${{ matrix.os }}
+#
+#    permissions:
+#      id-token: write
+#      contents: write
+#      issues: write
+#      pull-requests: write
+#
+#    strategy:
+#      fail-fast: true
+#      matrix:
+#        os: [ 'ubuntu-latest' ]
+#        python-version: [ '3.12' ]
+#
+#    steps:
+#      - name: Check out repository
+#        uses: actions/checkout@v4
+#        with:
+#          fetch-depth: 0
+#
+#      - name: Set Git identity
+#        run: |
+#          git config --global user.name 'GitHub Action'
+#          git config --global user.email 'action@github.com'
+#
+#      - name: Merge into master
+#        id: merge
+#        run: |
+#          git checkout master
+#          git merge --no-ff $GITHUB_REF
+#        continue-on-error: false
+#
+#      - name: Push to master
+#        if: steps.merge.outcome == 'success'
+#        run: |
+#          git push origin master
+#        env:
+#          GH_TOKEN: ${{ secrets.GH_REPO_ACCESS_BY_OWN_APPS }}
 
   publish:
-    needs: Merge
+    needs: BUild
     runs-on: ${{ matrix.os }}
 
     strategy:
