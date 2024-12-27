@@ -123,7 +123,7 @@ jobs:
 #        run: poetry run pytest  # Replace it with your test command
 
 
-  Send Notice:
+  Send-Notice:
     needs: Build-and-Publish
     runs-on: ${{ matrix.os }}
 
