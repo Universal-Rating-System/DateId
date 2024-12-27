@@ -7,19 +7,19 @@ jobs:
   Build:
     runs-on: ${{ matrix.os }}
 
-    environment:
-      name: pypi
-      url: https://pypi.org/p/DateId
+#    environment:
+#      name: pypi
+#      url: https://pypi.org/p/DateId
 
     permissions:
 #      id-token: write
       contents: write
       id-token: write
-      issues: write
-      pull-requests: write
+#      issues: write
+#      pull-requests: write
 
     strategy:
-      fail-fast: true
+#      fail-fast: true
       matrix:
         os: [ 'ubuntu-latest' ]
         python-version: [ '3.12' ]
@@ -43,7 +43,7 @@ jobs:
       - name: Build package
         run: |
           poetry build
-          ls -la dist  # Debug: list what's in dist
+          ls -la dist  # Just to verify the artifacts exist
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
