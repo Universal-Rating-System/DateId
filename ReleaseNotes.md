@@ -1,3 +1,9 @@
+# Release 1.5.2
+
+- Add Release to Workflow
+
+______________________________________________________________________
+
 # Release 1.5.1
 
 - Add git merge to Workflow

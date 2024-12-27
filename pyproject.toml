@@ -28,7 +28,7 @@ profile = "black"
 
 [tool.poetry]
 name = 'DateId'
-version = '1.5.1'
+version = '1.5.2'
 description = 'Calculate an integer value for months and dates from a base date.'
 authors = [
     "Hendrik du Toit <hendrik@brightedge.co.za>",
