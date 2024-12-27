@@ -1,3 +1,9 @@
+# Release 1.5.5
+
+- Fix "Send Notice" to Workflow
+
+______________________________________________________________________
+
 # Release 1.5.4
 
 - Fix "Send Notice" to Workflow
