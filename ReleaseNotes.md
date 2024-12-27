@@ -1,9 +1,18 @@
-# Release 1.0.0
+# Release 1.5.1
 
-## General Changes
+- Add git merge to Workflow
 
 ______________________________________________________________________
 
-# Release 0.0.1
+# Release 1.5.0
 
 ## General Changes
+
+- Update the ISSUE_TEMPLATE's
+- Rename the Workflow files from .yml to .yaml
+- Update the pre-commit hooks
+- Fix the Workflows
+- Fix the single quote's to double quote's
+- Replace the CHANGES.md with ReleaseNotes.md
+- Remove the MANIFEST.in file
+- Adapt pyproject.toml with Poetry configurations.
