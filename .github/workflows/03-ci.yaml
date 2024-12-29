@@ -2,8 +2,7 @@ name: CI
 
 on:
   workflow_run:
-    workflows:
-      - Pre-Commit and Document Check
+    workflows: ["Pre-Commit and Document Check"]
     types:
       - completed
 
@@ -21,6 +20,8 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
