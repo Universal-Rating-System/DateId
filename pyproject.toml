@@ -28,7 +28,7 @@ profile = "black"
 
 [tool.poetry]
 name = 'DateId'
-version = '1.5.6'
+version = '1.5.6    '
 description = 'Calculate an integer value for months and dates from a base date.'
 authors = [
     "Hendrik du Toit <hendrik@brightedge.co.za>",
@@ -63,6 +63,7 @@ pre-commit = "^3.8.0"
 pytest = "^8.3.4"
 codecov = "^2.1.13"
 pytest-cov = "^6.0.0"
+rstcheck = "^6.2.4"
 
 [tool.poetry.urls]
 issues = "https://github.com/BrightEdgeeServices/DateId/issues"
