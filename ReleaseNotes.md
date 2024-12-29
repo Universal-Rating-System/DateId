@@ -1,3 +1,11 @@
+# Release 1.5.6
+
+- Fix badges in README.rst
+  - Maintenance
+  - License
+
+______________________________________________________________________
+
 # Release 1.5.5
 
 - Fix "Send Notice" to Workflow

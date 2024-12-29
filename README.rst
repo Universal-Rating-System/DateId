@@ -5,7 +5,7 @@ DateId
 +-----------+------------------------------------------------------------------------------------+
 |**General**| |maintenance_y| |semver| |license|                                                 |
 +-----------+------------------------------------------------------------------------------------+
-|**CI**     | |gha_tests| |gha_docu| |pre_commit_ci| |codestyle| |codecov|                       |
+|**CI**     | |gh_ci| |gha_docu| |pre_commit_ci| |codestyle| |codecov|                       |
 +-----------+------------------------------------------------------------------------------------+
 |**PyPI**   | |pypi_release| |pypi_py_versions| |pypi_status| |pypi_format| |pypi_downloads|     |
 +-----------+------------------------------------------------------------------------------------+
@@ -105,7 +105,7 @@ bit easier.  The scripts make use of the ``gitit`` module to simplify tasks.
     :target: http://unmaintained.tech/
     :alt: Maintenance - not intended
 
-.. |maintenance_y| image:: https://img.shields.io/badge/Maintenance%20Intended-?-green.svg?style=flat-square
+.. |maintenance_y| image:: https://img.shields.io/badge/Maintenance%20Intended-%E2%9C%94-green.svg?style=flat-square
     :target: http://unmaintained.tech/
     :alt: Maintenance - intended
 
@@ -128,8 +128,8 @@ bit easier.  The scripts make use of the ``gitit`` module to simplify tasks.
     :target: https://github.com/BrightEdgeeServices/DateId/blob/master/.github/workflows/pre-commit.yml
     :alt: Pre-Commit
 
-.. |gha_tests| image:: https://img.shields.io/github/actions/workflow/status/BrightEdgeeServices/DateId/ci.yml?label=ci
-    :target: https://github.com/BrightEdgeeServices/DateId/blob/master/.github/workflows/ci.yml
+.. |gh_ci| image:: https://img.shields.io/github/actions/workflow/status/BrightEdgeeServices/DateId/00-deployment-pipeline.yaml?label=ci
+    :target: https://github.com/BrightEdgeeServices/DateId/blob/master/.github/workflows/00-deployment-pipeline.yaml
     :alt: Test status
 
 .. |gha_docu| image:: https://img.shields.io/readthedocs/DateId

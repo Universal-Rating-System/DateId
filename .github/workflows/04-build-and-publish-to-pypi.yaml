@@ -1,7 +1,11 @@
 name: Build-and-Publish-to-PyPI
 
 on:
-  workflow_call:
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
 
 jobs:
   Merge:
@@ -102,7 +106,7 @@ jobs:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}  # or your PyPI API token
           packages_dir: dist
-          # verify_metadata: true  # optional, default: true
+          verify_metadata: true  # optional, default: true
           # skip_existing: false   # optional
           # attestations: true     # optional
 

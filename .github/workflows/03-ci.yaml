@@ -1,7 +1,11 @@
 name: CI
 
 on:
-  workflow_call:
+  workflow_run:
+    workflows:
+      - Pre-Commit and Document Check
+    types:
+      - completed
 
 jobs:
   CI:
