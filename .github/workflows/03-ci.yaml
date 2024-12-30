@@ -52,10 +52,16 @@ jobs:
       #      - name: Create Reahl db user
       #        run: reahl createdbuser etc
 
-      - name: Run pytest
+      - name: Run pytest with coverage
         run: |
           echo "PythonPath=$PYTHONPATH"
-          poetry run pytest  --cov=./
+          poetry run pytest --cov=./ --cov-report=xml
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+#      - name: Upload coverage to Codecov
+#        uses: codecov/codecov-action@v3
+#        with:
+#          files: coverage.xml
+#          fail_ci_if_error: true
+#          token: ${{ secrets.CODECOV_TOKEN }}
+#          slug: BrightEdgeeServices/DateId
+

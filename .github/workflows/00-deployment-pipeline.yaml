@@ -1,7 +1,6 @@
 name: PyPI Pipeline
 
 on:
-#  pull_request:
   push:
 
 jobs:
