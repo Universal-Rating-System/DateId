@@ -1,8 +1,7 @@
 name: Pre-Commit and Document Check
 
 on:
-#  workflow_call:
-  push:
+  workflow_call:
 
 jobs:
   Pre-Commit:

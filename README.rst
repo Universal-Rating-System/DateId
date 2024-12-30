@@ -128,15 +128,16 @@ bit easier.  The scripts make use of the ``gitit`` module to simplify tasks.
     :target: https://github.com/BrightEdgeeServices/DateId/blob/master/.github/workflows/pre-commit.yml
     :alt: Pre-Commit
 
-.. |gh_ci| image:: https://img.shields.io/github/actions/workflow/status/BrightEdgeeServices/DateId/00-deployment-pipeline.yaml?label=ci
-    :target: https://github.com/BrightEdgeeServices/DateId/blob/master/.github/workflows/00-deployment-pipeline.yaml
+.. |gh_ci| image:: https://github.com/BrightEdgeeServices/DateId/actions/workflows/01-pre-commit-and-document-check.yaml/badge.svg)
+    :target: https://github.com/BrightEdgeeServices/DateId/actions/workflows/01-pre-commit-and-document-check.yaml
     :alt: Test status
 
 .. |gha_docu| image:: https://img.shields.io/readthedocs/DateId
     :target: https://github.com/BrightEdgeeServices/DateId/blob/master/.github/workflows/check-rst-documentation.yml
     :alt: Read the Docs
 
-.. |codecov| image:: https://img.shields.io/codecov/c/gh/BrightEdgeeServices/DateId
+.. |codecov| image:: https://img.shields.io/codecov/c/github/BrightEdgeeServices/DateId
+   :alt: Codecov
     :target: https://app.codecov.io/gh/BrightEdgeeServices/DateId
     :alt: CodeCov
 
