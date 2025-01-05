@@ -28,7 +28,7 @@ profile = "black"
 
 [tool.poetry]
 name = 'DateId'
-version = '1.5.6    '
+version = '1.5.6'
 description = 'Calculate an integer value for months and dates from a base date.'
 authors = [
     "Hendrik du Toit <hendrik@brightedge.co.za>",
@@ -46,8 +46,8 @@ classifiers = [
     'Programming Language :: Python :: 3.11'
 ]
 # documentation = "https://readthedocs.org"
-homepage = 'https://github.com/BrightEdgeeServices/venvit'
-repository = "https://github.com/RealTimeEvents/rtecommon.git"
+homepage = 'https://github.com/BrightEdgeeServices/DateId'
+repository = "https://github.com/RealTimeEvents/DateId.git"
 
 [tool.poetry.dependencies]
 python = "^3.12.2"

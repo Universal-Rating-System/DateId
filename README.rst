@@ -25,7 +25,7 @@ Installation
 
 .. code-block:: bash
 
-    python -m venv ./FastAPIexample_venv
+    python -m venv ./DataId_venv
     pip install FastAPIexample
     pre-commit install
     SET MYSQL_HOST=localhost
