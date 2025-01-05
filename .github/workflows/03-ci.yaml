@@ -33,13 +33,9 @@ jobs:
         run: |
           poetry config keyring.enabled false
           poetry config http-basic.rtecommon x-access-token ${{ secrets.GH_REPO_ACCESS_BY_OWN_APPS }}
-#          poetry config http-basic.github.com x-access-token ${{ secrets.GH_REPO_ACCESS_BY_OWN_APPS }}
 
       - name: Upgrade pip
         run: python -m pip install --upgrade pip
-
-#      - name: Set PYTHONPATH
-#        run: echo "PYTHONPATH=$PWD:$PWD/src" >> $GITHUB_ENV
 
       - name: Install editable package
         run: pip install -e .[dev]
@@ -47,10 +43,6 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install --with dev
-
-      #      # Create the user, else the pytests fail
-      #      - name: Create Reahl db user
-      #        run: reahl createdbuser etc
 
       - name: Run pytest with coverage
         run: |
@@ -64,4 +56,3 @@ jobs:
 #          fail_ci_if_error: true
 #          token: ${{ secrets.CODECOV_TOKEN }}
 #          slug: BrightEdgeeServices/DateId
-
