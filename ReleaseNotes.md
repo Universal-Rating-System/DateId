@@ -1,6 +1,16 @@
 # Release 1.5.7
 
--
+- Cleaning up
+  - 03-ci.yaml
+  - dependabot.yaml
+- Updated
+  - .flake8
+  - .gitignore
+  - install.ps1
+  - LICENSE
+- Deleted
+  - MANIFEST.IN
+  - t.yaml
 
 ______________________________________________________________________
 
