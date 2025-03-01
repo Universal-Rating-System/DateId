@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
 
 [project]
 name = 'DateId'
-version = '1.5.8'
+version = '1.5.9'
 description = 'Calculate an integer value for months and dates from a base date.'
     authors = [
         { name = 'Hendrik du Toit', email = 'hendrik@brightedge.co.za' },
