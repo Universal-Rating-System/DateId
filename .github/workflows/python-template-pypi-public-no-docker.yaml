@@ -12,7 +12,7 @@ jobs:
       id-token: write
       contents: write
     #    if: github.event.pull_request.merged == true
-    uses: BrightEdgeeServices/devops-automation/.github/workflows/python-wf-pypi-public-no-docker.yaml@master
+    uses: RealTimeEvents/devops-automation/.github/workflows/python-wf-pypi-public-no-docker.yaml@master
     with:
       run_deploy: ${{ startsWith(github.ref, 'refs/tags/') == true }}
     # secrets: inherit
