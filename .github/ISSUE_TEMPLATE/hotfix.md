@@ -29,7 +29,7 @@ assignees: ''
 - Python version:
 - Operating System:
 - Install method (pip, source):
-- rtedb Version:
+- Source Code Version:
 
 ## Branch Name
 

@@ -16,7 +16,7 @@ assignees: ''
 
 ## List the source code file(s)
 
-<!-- Files and line number where you think the error is (if known) -->
+**List the source code file(s) and line number where you think the error is (if known)**
 
 ## Minimal Complete Verifiable Example
 
@@ -31,13 +31,15 @@ assignees: ''
 - Python version:
 - Operating System:
 - Install method (pip, source):
-- DateId Version:
+- Source Code Version:
 
 ## Branch Name
 
 <!--Will be provided by owner -->
 
 ## Checks
+
+Only once all the checks below are completed should there be a new release:
 
 - [ ] Remove warnings, errors and spelling reported by IDE.
 - [ ] Update / remove ToDo's
@@ -47,5 +49,3 @@ assignees: ''
 - [ ] Pre-Commit successful.
 - [ ] CI successful.
 - [ ] CodeCov above 99% or justifiably less.
-- [ ] Badges are correct.
-- [ ] Changed current branch to `master`.

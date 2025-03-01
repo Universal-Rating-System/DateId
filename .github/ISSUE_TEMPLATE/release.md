@@ -7,7 +7,7 @@ labels: enhancement
 
 ## Tickets / branches included
 
-- [](<>)
+- [#0](<>)
 
 ## Branch Name
 
@@ -22,5 +22,7 @@ labels: enhancement
 - [ ] CI successful
 - [ ] CodeCov above 99% or justifiably less
 - [ ] Badges are correct.
+- [ ] Emailed notices.
+- [ ] Published on PyPI.
 - [ ] Changed current branch to `master`
 - [ ] Deleted the development branch
