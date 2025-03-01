@@ -42,7 +42,7 @@ classifiers = [
     Issues = "https://github.com/BrightEdgeeServices/DateId/issues"
     Changelog = 'https://github.com/BrightEdgeeServices/DateId/blob/enhancement/master/ReleaseNotes.md'
     Homepage = 'https://github.com/BrightEdgeeServices/DateId'
-    Repository = "https://github.com/RealTimeEvents/DateId.git"
+    Repository = "https://github.com/BrightEdgeeServices/DateId.git"
 
 [tool.black]
     line-length = 120

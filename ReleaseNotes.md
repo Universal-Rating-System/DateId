@@ -1,3 +1,10 @@
+# Release 1.5.9
+
+- Fix URL references in pyprject.toml
+- Fix badges references in README
+
+______________________________________________________________________
+
 # Release 1.5.8
 
 - Update ISSUE_TEMPLATE's
