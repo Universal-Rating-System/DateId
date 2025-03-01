@@ -1,3 +1,30 @@
+# Release 1.5.8
+
+- Update ISSUE_TEMPLATE's
+- Implement GitHub Reusable workflows.
+- Remove unnecessary doc folder.
+- Upgrade to support Python 13.1
+- Update formatting configuration files
+  - flake8
+  - .gitattributes
+  - .gitignore
+  - .pre-commit-config.yaml
+  - readthedocs.yaml
+  - rstcheck.cfg
+- Delete redundant files
+  - Docker files
+  - install.ps1
+- Add utility scripts
+  - InstallDevEnv.ps1
+  - SetupDotEnv.ps1
+  - SetupGitHubAccess.ps1
+  - SetupPrivateRepoAccess.ps1
+- Update time_machine in pytest
+  - Add decorator
+  - Removed duplicate test
+
+______________________________________________________________________
+
 # Release 1.5.7
 
 - Cleaning up
