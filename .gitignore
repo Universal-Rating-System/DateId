@@ -20,7 +20,7 @@
 _build/
 bin/
 build/
-coverage.*
+coverage*
 dist/
 docs/source/generated/
 htmlcov/
