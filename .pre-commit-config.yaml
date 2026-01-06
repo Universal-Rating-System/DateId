@@ -10,8 +10,6 @@ repos:
       - id: check-toml
       - id: check-yaml
       - id: debug-statements
-      #      - id: mixed-line-ending
-      #        args: [ --fix=crlf ]
       - id: no-commit-to-branch
         args: [ --branch, master ]
       - id: pretty-format-json
@@ -20,14 +18,13 @@ repos:
         args: [ --markdown-linebreak-ext=md ]
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: 1.0.0  # Use the ref you want to point at
+    rev: 1.0.0
     hooks:
       - id: mdformat
         args: [ --end-of-line, crlf, README.md, ReleaseNotes.md ]
         additional_dependencies:
           - mdformat-black
           - mdformat-gfm
-          - mdformat_frontmatter
 
 #  - repo: https://github.com/rstcheck/rstcheck
 #    rev: v6.2.4
@@ -40,7 +37,7 @@ repos:
     rev: v3.21.2
     hooks:
       - id: pyupgrade
-        args: [ --py311-plus ]
+        args: [ --py312-plus ]
 
   - repo: https://github.com/pycqa/isort
     rev: 7.0.0
@@ -58,7 +55,7 @@ repos:
           - tomli
 
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 25.11.0
+    rev: 25.12.0
     hooks:
     - id: black
       language_version: python3

@@ -7,7 +7,57 @@
 | PyPI         | [![][pypi_release_img]][pypi_release_lnk] [![][pypi_py_versions_img]][pypi_py_versions_lnk] [![][pypi_format_img]][pypi_format_lnk] [![][pypi_downloads_img]][pypi_downloads_lnk]             |
 | Github       | [![][gh_issues_img]][gh_issues_lnk] [![][gh_language_img]][gh_language_lnk] [![][gh_last_commit_img]][gh_last_commit_lnk] [![][gh_deployment_img]][gh_deployment_lnk]                         |
 
-Calculate an integer value for months and dates from a base date.
+# Overview
+
+`DateId` is a Python utility designed to calculate unique integer identifiers for dates and months relative to a configurable base date. This is particularly useful for database indexing, time-series analysis, or any application where a continuous integer representation of time is more efficient than standard date formats.
+
+## Key Features
+
+- **Day ID Calculation**: Compute a unique integer for any given date.
+- **Month ID Calculation**: Compute a unique integer for any given month.
+- **Flexible Base Date**: Set a custom base date (defaults to 2008-01-01).
+- **Range Generation**: Generate sequences of day and month IDs for a specified period.
+- **Date Conversion**: Convert a `DayID` back into a standard date object or string.
+- **Leap Year Support**: Built-in utility for leap year verification.
+
+## Basic Usage
+
+### Initializing DateId
+
+```python
+from dateid import DateId
+
+# Initialize with default base date (2008-01-01)
+di = DateId()
+
+# Initialize with a custom base date
+di_custom = DateId(p_base_date_str="2000-01-01")
+```
+
+### Calculating IDs
+
+```python
+# Get Day ID for a specific date
+day_id = di.calc_day_id(p_target_date_str="2023-12-25")
+
+# Get Month ID for a specific date
+month_id = di.calc_month_id(p_target_date_str="2023-12-25")
+```
+
+### Converting ID back to Date
+
+```python
+# Get date for a specific Day ID
+di.specific_date(p_day_id=5838)
+print(di.target_date_str)  # Output: 20231225
+```
+
+### Generating Ranges
+
+```python
+# Generate ranges between two dates
+days_tbl, months_tbl = di.generate_range("2023-01-01", "2023-01-05")
+```
 
 [cicd_codestyle_img]: https://img.shields.io/badge/code%20style-black-000000.svg "Black"
 [cicd_codestyle_lnk]: https://github.com/psf/black "Black"
